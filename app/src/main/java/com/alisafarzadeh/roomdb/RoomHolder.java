@@ -23,6 +23,9 @@ public abstract class RoomHolder extends RoomDatabase {
                     .allowMainThreadQueries()
                     .fallbackToDestructiveMigration()
                     .build();
+
+            OneTimeRun oneTimeRun = new OneTimeRun();
+            oneTimeRun.setdata();
         }
         return database;
     }

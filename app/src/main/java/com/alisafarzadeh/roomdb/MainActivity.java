@@ -2,10 +2,14 @@ package com.alisafarzadeh.roomdb;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,13 +24,16 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btninsert;
+    Button btninsert,removelayoutebtn;
     EditText edit_english,edit_persian;
+    FloatingActionButton floatingActionButton;
 
     List<MainData> dataList = new ArrayList<>();
     RecAdapter recAdapter;
@@ -36,15 +43,41 @@ public class MainActivity extends AppCompatActivity {
     List<DataTemp> temp = new ArrayList<>();
     Intent intent;
 
+    Toolbar toolbar;
+    CardView cardView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toolbar = findViewById(R.id.toolbarid);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         intent = new Intent(MainActivity.this, MyServiceVocab.class);;
         edit_persian = findViewById(R.id.EditPersian);
         edit_english =findViewById(R.id.EditEnglish);
         rec = findViewById(R.id.Recycler);
         btninsert =findViewById(R.id.BtnInsert);
+        removelayoutebtn=findViewById(R.id.removeaddlayoutBTN);
+        floatingActionButton = findViewById(R.id.actionbutton);
+        cardView = findViewById(R.id.cardView);
+
+
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                floatingActionButton.setVisibility(View.GONE);
+                cardView.setVisibility(View.VISIBLE);
+
+            }
+        });
+        removelayoutebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cardView.setVisibility(View.GONE);
+                floatingActionButton.setVisibility(View.VISIBLE);
+            }
+        });
 
         recAdapter = new RecAdapter(MainActivity.this,dataList);
 
@@ -77,6 +110,10 @@ public class MainActivity extends AppCompatActivity {
                     dataList.clear();
                     dataList.addAll(dbholder.mainDao().getAllData());
                     recAdapter.notifyDataSetChanged();
+
+                    edit_english.setText("");
+                    edit_persian.setText("");
+                    rec.smoothScrollToPosition(dbholder.mainDao().getAllData().size());
                 }
             }
         });

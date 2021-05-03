@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/first"
+    android:background="@color/twe"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -17,10 +17,11 @@
             android:id="@+id/englayout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:gravity="center"
+            android:fontFamily="@font/iransansweb"
+            android:gravity="right"
             android:text="TextView"
-            android:textColor="#ddddff"
-            android:textSize="26sp"
+            android:textColor="@color/three"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,11 +30,12 @@
             android:id="@+id/perlayout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:gravity="left"
             android:text="TextView"
-            android:textColor="#ddddff"
-            android:textSize="26sp"
+            android:fontFamily="@font/iransansweb"
+            android:textColor="@color/three"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/englayout" />
@@ -41,9 +43,9 @@
 
     <ImageView
         android:id="@+id/imgclose"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_margin="12dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
         android:background="@drawable/closeicon" />
 
 

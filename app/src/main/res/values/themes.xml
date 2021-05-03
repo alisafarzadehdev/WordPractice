@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.RoomDB" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.RoomDB" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -16,7 +16,7 @@
 
     <style name="text" parent="TextAppearance.AppCompat">
         <item name="fontFamily">@font/iransansweb</item>
-        <item name="android:textColor">@color/secend</item>
+        <item name="android:textColor">@color/three</item>
         <item name="android:textSize">16sp</item>
     </style>
 
@@ -25,20 +25,54 @@
         <item name="android:textColorSecondary">#14ff56</item>
     </style>
 
-    <style name="spinnerTheme">
-        <item name="android:textColor">@color/secend</item>
-        <item name="android:itemBackground">@color/secend</item>
-        <item name="android:popupAnimationStyle">@color/first</item>
+    <style name="spinnerTheme" parent="Widget.AppCompat.Spinner">
+        <item name="color">@color/four</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:itemBackground">@color/four</item>
+        <item name="android:popupAnimationStyle">@color/white</item>
     </style>
 
     <style name="MyCustomTextInputStyle" parent="Widget.Design.TextInputLayout">
-        <item name="android:textColorHint">@color/first</item>
+        <item name="android:textColorHint">@color/three</item>
+        <item name="colorPrimary">#f00000</item>
+        <item name="colorSecondary">#f0f050</item>
+        <item name="colorAccent">#1bf450</item>
 
     </style>
 
+    <style name="EditTextHint" parent="Widget.AppCompat.EditText">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColorHint">@color/four</item>
+        <item name="colorControlNormal">@color/first</item>
+        <item name="colorControlActivated">@color/twe</item>
+        <item name="colorControlHighlight">@color/one</item>
+    </style>
+
+    <style name="EditTextHintt" parent="Widget.Design.TextInputLayout">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColorHint">@color/four</item>
+        <item name="colorControlNormal">@color/first</item>
+        <item name="colorControlActivated">@color/twe</item>
+        <item name="colorControlHighlight">@color/one</item>
+    </style>
+
+    <style name="MyTextInputLayout" parent="Widget.Design.TextInputLayout">
+        <!-- border color -->
+        <item name="boxStrokeColor">@color/first</item>
+
+        <!-- The color of the label when it is collapsed and the text field is active -->
+        <item name="hintTextColor">@color/four</item>
+        <!-- The color of the label in all other text field states (such as resting and disabled) -->
+        <item name="android:textColorHint">@color/one</item>
+    </style>
+
     <style name="MyCustomEditTextStyle" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">#c47566</item>
+        <item name="android:color">#c47566</item>
+        <item name="android:colorForeground">#c47566</item>
         <item name="fontFamily">@font/iransansweb</item>
+        <item name="colorPrimary">@color/twe</item>
     </style>
 
 </resources>

@@ -73,6 +73,7 @@ public class MyServiceVocab extends Service implements TextToSpeech.OnInitListen
             case "close":
                 stopForeground(true);
                 stopSelf();
+                textToSpeech.shutdown();
                 break;
             case "play":
                 startserviice();
@@ -204,7 +205,9 @@ public class MyServiceVocab extends Service implements TextToSpeech.OnInitListen
     @Override
     public void onInit(int status) {
         if (status==TextToSpeech.SUCCESS){
-            textToSpeech.setLanguage(Locale.US);
+            textToSpeech.setLanguage(Locale.UK);
+            textToSpeech.setPitch(0.4f);
+            textToSpeech.setSpeechRate(0.7f);
         }
     }
 }

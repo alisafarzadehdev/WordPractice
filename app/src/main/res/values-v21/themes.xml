@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyCustomEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">#c47566</item>
+        <item name="fontFamily">@font/iransansweb</item>
+        <item name="android:colorAccent">@color/four</item>
+        <item name="colorPrimary">@color/twe</item>
+    </style>
+
+</resources>

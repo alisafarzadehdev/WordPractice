@@ -5,9 +5,9 @@
     <application
         android:name=".G"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/iconappword"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/iconappword"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomDB">
         <activity android:name=".MainActivity">
