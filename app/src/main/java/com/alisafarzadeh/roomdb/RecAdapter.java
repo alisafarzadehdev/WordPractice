@@ -1,7 +1,6 @@
 package com.alisafarzadeh.roomdb;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
@@ -16,8 +15,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Delete;
-import androidx.room.Room;
+
+import com.alisafarzadeh.roomdb.Room.MainData;
+import com.alisafarzadeh.roomdb.Room.RoomHolder;
 
 import java.util.ArrayList;
 import java.util.List;

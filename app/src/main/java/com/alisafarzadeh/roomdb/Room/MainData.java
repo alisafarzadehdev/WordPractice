@@ -1,4 +1,4 @@
-package com.alisafarzadeh.roomdb;
+package com.alisafarzadeh.roomdb.Room;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

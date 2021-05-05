@@ -1,12 +1,13 @@
-package com.alisafarzadeh.roomdb;
+package com.alisafarzadeh.roomdb.Room;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
 import androidx.room.Database;
-import androidx.room.Query;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
+import com.alisafarzadeh.roomdb.Utill.OneTimeRun;
 
 @Database(entities = {MainData.class},version =1,exportSchema = false)
 public abstract class RoomHolder extends RoomDatabase {
@@ -36,7 +37,7 @@ public abstract class RoomHolder extends RoomDatabase {
     public static class deleteAllWordsAsyncTask extends AsyncTask<Void, Void, Void> {
         private MainDao mAsyncTaskDao;
         MainData mainData;
-        deleteAllWordsAsyncTask(MainDao dao, MainData main) {
+        public deleteAllWordsAsyncTask(MainDao dao, MainData main) {
             mAsyncTaskDao = dao;
             mainData = main;
         }

@@ -8,8 +8,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +22,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.alisafarzadeh.roomdb.Room.MainData;
+import com.alisafarzadeh.roomdb.Room.RoomHolder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rec;
     RoomHolder dbholder;
 
-    List<DataTemp> temp = new ArrayList<>();
     Intent intent;
 
     Toolbar toolbar;
