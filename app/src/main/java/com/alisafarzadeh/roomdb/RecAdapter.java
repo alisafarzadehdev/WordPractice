@@ -74,22 +74,11 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.Holder> implemen
                 {
                     persian_select.add(dataList.get(position).getPersian());
                     english_select.add(dataList.get(position).getEnglish());
-                    String temp = "";
-                    for (int i = 0; i < english_select.size(); i++) {
-                        temp+=english_select.get(i)+":"+persian_select.get(i)+"\n";
-                    }
-                    Toast.makeText(context, temp + "", Toast.LENGTH_SHORT).show();
 
                 }else {
 
                     persian_select.remove(dataList.get(position).getPersian());
                     english_select.remove(dataList.get(position).getEnglish());
-                    String temp = "";
-                    for (int i = 0; i < english_select.size(); i++) {
-                        temp+=english_select.get(i)+":"+persian_select.get(i)+"\n";
-                    }
-                    Toast.makeText(context, temp + "", Toast.LENGTH_SHORT).show();
-
                 }
 
 
